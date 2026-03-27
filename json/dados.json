@@ -1,0 +1,319 @@
+{
+  "dados": [
+    {
+      "id": "1",
+      "nome": "ÁGUA DE COCO KERO COCO 200ML",
+      "categoria": "Bebidas",
+      "preco": 5.59,
+      "imagem": "imagens/Kero-Coco-200ml.png",
+      "descricao": "Água de coco natural e refrescante",
+      "informacaoNutricional": {
+        "Calorias": "45 kcal",
+        "Proteina": "0.5g",
+        "Carboidratos": "10g",
+        "Gorduras": "0g",
+        "Fibra": "0g",
+        "Sódio": "250mg"
+      }
+    },
+    {
+      "id": "2",
+      "nome": "ÁGUA CRYSTAL COM GÁS 500ML",
+      "categoria": "Bebidas",
+      "preco": 3.99,
+      "imagem": "imagens/agua-Crystal-Com-Gas-500.png",
+      "descricao": "Água mineral com gás",
+      "informacaoNutricional": {
+        "Calorias": "0 kcal",
+        "Proteina": "0g",
+        "Carboidratos": "0g",
+        "Gorduras": "0g",
+        "Fibra": "0g",
+        "Sódio": "50mg"
+      }
+    },
+    {
+      "id": "3",
+      "nome": "ÁGUA CRYSTAL SEM GÁS 500ML",
+      "categoria": "Bebidas",
+      "preco": 3.99,
+      "imagem": "imagens/agua-Crystal-500.png",
+      "descricao": "Água mineral pura",
+      "informacaoNutricional": {
+        "Calorias": "0 kcal",
+        "Proteina": "0g",
+        "Carboidratos": "0g",
+        "Gorduras": "0g",
+        "Fibra": "0g",
+        "Sódio": "50mg"
+      }
+    },
+    {
+      "id": "4",
+      "nome": "REFRIGERANTE COCA COLA 350ML",
+      "categoria": "Bebidas",
+      "preco": 6.99,
+      "imagem": "imagens/02.png",
+      "descricao": "Refrigerante coca cola",
+      "informacaoNutricional": {
+        "Calorias": "0 kcal",
+        "Proteina": "0g",
+        "Carboidratos": "0g",
+        "Gorduras": "0g",
+        "Fibra": "0g",
+        "Sódio": "80mg"
+      }
+    },
+    {
+      "id": "5",
+      "nome": "FANTA LARANJA 350ML",
+      "categoria": "Bebidas",
+      "preco": 3.49,
+      "imagem": "imagens/03fanta.png",
+      "descricao": "Fanta Laranja",
+      "informacaoNutricional": {
+        "ValorEnergético": "140 kcal",
+        "Carboidratos": "35g",
+        "AçúcaresTotais": "35g",
+        "AçúcaresAdicionados": "34g",
+        "Sódio": "42mg"
+      }
+    },
+    {
+      "id": "6",
+      "nome": "FANTA UVA 350ML",
+      "categoria": "Bebidas",
+      "preco": 3.49,
+      "imagem": "imagens/04fanta.png",
+      "descricao": "Fanta Uva",
+      "informacaoNutricional": {
+        "ValorEnergético": "81 kcal",
+        "Carboidratos": "20g",
+        "AçúcaresTotais": "20g",
+        "AçúcaresAdicionados": "17g",
+        "Sódio": "54mg"
+      }
+    },
+    {
+      "id": "7",
+      "nome": "GUARANÁ ANTARCTICA 350ML",
+      "categoria": "Bebidas",
+      "preco": 3.5,
+      "imagem": "imagens/guarana-antartica-350ml.png",
+      "descricao": "Original do Brasil",
+      "informacaoNutricional": {
+        "ValorEnergético": "105 kcal",
+        "Carboidratos": "26g",
+        "AçúcaresTotais": "26g",
+        "AçúcaresAdicionados": "26g",
+        "Sódio": "30mg"
+      }
+    },
+    {
+      "id": "8",
+      "nome": "PEPSI  350ML",
+      "categoria": "Bebidas",
+      "preco": 3.20,
+      "imagem": "imagens/Pepsi.png",
+      "descricao": "Refrigerante de cola com sabor único",
+      "informacaoNutricional": {
+        "ValorEnergético": "97 kcal",
+        "Carboidratos": "24g",
+        "AçúcaresTotais": "24g",
+        "AçúcaresAdicionados": "24g",
+        "Sódio": "43mg"
+      }
+    },
+    {
+      "id": "9",
+      "nome": "ENERGÉTICO MONSTER 473ML",
+      "categoria": "Bebidas",
+      "preco": 9.99,
+      "imagem": "imagens/Monster-473ml.png",
+      "descricao": "Energético Monster",
+      "informacaoNutricional": {
+        "ValorEnergético": "94 kcal",
+        "Carboidratos": "24g",
+        "AçúcaresTotais": "23g",
+        "Sódio": "154mg"
+      }
+    },
+    {
+      "id": "10",
+      "nome": "ENERGÉTICO REDBULL 250ml",
+      "categoria": "Bebidas",
+      "preco": 6.5,
+      "imagem": "imagens/RedBull-250ml.png",
+      "descricao": "Red Bull",
+      "informacaoNutricional": {
+        "ValorEnergético": "110 kcal",
+        "Carboidratos": "28g",
+        "AçúcaresTotais": "28g",
+        "Sódio": "103mg"
+      }
+    },
+    {
+      "id": "11",
+      "nome": "BALA MORANGO HALLS 28G",
+      "categoria": "Doces",
+      "preco": 2.99,
+      "imagem": "imagens/halls-morango-28g.png",
+      "descricao": "Bala de morango refrescante",
+      "informacaoNutricional": {
+        "Calorias": "100 kcal",
+        "Proteina": "0g",
+        "Carboidratos": "25g",
+        "Gorduras": "0g",
+        "Fibra Alimentar": "0g",
+        "Sódio": "20mg"
+      }
+    },
+    {
+      "id": "12",
+      "nome": "BALA SKITTLES 38G",
+      "categoria": "Doces",
+      "preco": 5.99,
+      "imagem": "https://d2xsxph8kpxj0f.cloudfront.net/310519663104223350/LzWXktRP6jVCNSYJrQ75bH/bala-skittles-gQASyatBfnKCFBe5mbJoMm.webp",
+      "descricao": "Balas coloridas e saborosas",
+      "informacaoNutricional": {
+        "Calorias": "150 kcal",
+        "Proteina": "0g",
+        "Carboidratos": "35g",
+        "Gorduras": "0g",
+        "Fibra Alimentar": "0g",
+        "Sódio": "10mg"
+      }
+    },
+    {
+      "id": "13",
+      "nome": "KIT KAT 41,5g",
+      "categoria": "Doces",
+      "preco": 4.49,
+      "imagem": "imagens/KitKat-normal.png",
+      "descricao": "Chocolate com wafer crocante",
+      "informacaoNutricional": {
+        "Calorias": "219 kcal",
+        "Proteina": "3,3g",
+        "Carboidratos": "24g",
+        "Gorduras": "12g",
+        "Fibra Alimentar": "0.9g",
+        "Sódio": "38mg"
+      }
+    },
+    {
+      "id": "14",
+      "nome": "SNICKERS 45G",
+      "categoria": "Doces",
+      "preco": 5.59,
+      "imagem": "imagens/snickers.png",
+      "descricao": "Snickers, Mata sua Fome",
+      "informacaoNutricional": {
+        "ValorEnergético": "217 kcal",
+        "Carboidratos": "27g",
+        "Proteinas": "4g",
+        "AçúcaresTotais": "26g",
+        "AçúcaresAdicionados": "21g",
+        "GordurasTotais": "20g",
+        "GordurasSaturadas": "4,9g",
+        "Sódio": "96mg"
+        }
+    },
+    {
+      "id": "15",
+      "nome": "BISCOITO TRAKINAS MORANGO 126G",
+      "categoria": "Doces",
+      "preco": 5.99,
+      "imagem": "https://d2xsxph8kpxj0f.cloudfront.net/310519663104223350/LzWXktRP6jVCNSYJrQ75bH/bala-skittles-gQASyatBfnKCFBe5mbJoMm.webp",
+      "descricao": "Biscoito crocante de morango",
+      "informacaoNutricional": {
+        "Calorias": "480 kcal",
+        "Proteina": "7g",
+        "Carboidratos": "60g",
+        "Gorduras": "22g",
+        "Fibra Alimentar": "1g",
+        "Sódio": "400mg"
+      }
+    },
+    {
+      "id": "16",
+      "nome": "TORCIDA PIMENTA MEXICANA 35G",
+      "categoria": "Salgados",
+      "preco": 5.99,
+      "imagem": "https://encrypted-tbn0.gstatic.com/imagems?q=tbn:ANd9GcQwTN_qrnE2XiTJ7epsZnut2lwcjyV5brlOrw&s",
+      "descricao": "Salgadinho Torcida sabor pimenta mexicana",
+      "informacaoNutricional": {
+        "Calorias": "480 kcal",
+        "Proteina": "7g",
+        "Carboidratos": "60g",
+        "Gorduras": "22g",
+        "Fibra Alimentar": "1g",
+        "Sódio": "400mg"
+      }
+    },
+    {
+      "id": "17",
+      "nome": "Ebicen 30g",
+      "categoria": "Salgados",
+      "preco": 5.5,
+      "imagem": "imagens/ebicen.png",
+      "descricao": "Ebicen camarão",
+      "informacaoNutricional": {
+        "ValorEnergético": "125 kcal",
+        "Carboidratos": "17g",
+        "AçúcaresTotais": "0g",
+        "AçúcaresAdicionados": "0g",
+        "Sódio": "275mg"
+      }
+    },
+    {
+      "id": "18",
+      "nome": "TORCIDA COSTELINHA COM LIMÃO",
+      "categoria": "Salgados",
+      "preco": 6.00,
+      "imagem": "imagens/torcida-costelinha-com-limão.png",
+      "descricao": "Salgadinho Torcida sabor Costelinha com Limão",
+      "informacaoNutricional": {
+        "ValorEnergético": "207 kcal",
+        "Carboidratos": "18g",
+        "Proteinas": "3,4g",
+        "GordurasTotais": "13g",
+        "GordurasSaturadas": "2,3g",
+        "Sódio": "299mg"
+      }
+    },
+    {
+      "id": "19",
+      "nome": "BATATA RUFFLES 33g",
+      "categoria": "Salgados",
+      "preco": 6.00,
+      "imagem": "imagens/Pacote-Ruffles.png",
+      "descricao": "Batata Ruffles original",
+      "informacaoNutricional": {
+        "ValorEnergético": "226 kcal",
+        "Carboidratos": "19g",
+        "Proteinas": "2,6g",
+        "GordurasTotais": "16g",
+        "GordurasSaturadas": "6,1g",
+        "Fibra Alimentar": "1g",
+        "Sódio": "106mg" 
+      }
+    },
+    {
+      "id": "20",
+      "nome": "OVINHOS DE AMENDOIM 65G",
+      "categoria": "Salgados",
+      "preco": 6.00,
+      "imagem": "imagens/Ovinho-amendoim.png",
+      "descricao": "Ovinhos de amendoim elma chips",
+      "informacaoNutricional": {
+        "ValorEnergético": "12 kcal",
+        "Carboidratos": "13g",
+        "Proteinas": "2,5g",
+        "GordurasTotais": "6,9g",
+        "GordurasSaturadas": "1,9g",
+        "Fibra Alimentar": "0,8g",
+        "Sódio": "299mg"
+     }
+    }
+  ]
+}
