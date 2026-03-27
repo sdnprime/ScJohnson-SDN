@@ -20,7 +20,6 @@ const formTabContents = document.querySelectorAll(".form-tab-content");
 function init() {
   carregarCards();
   renderProducts();
-  setupEventListeners();
 }
 
 async function carregarCards() {
