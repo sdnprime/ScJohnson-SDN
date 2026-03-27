@@ -92,18 +92,6 @@ function createProductCard(product) {
   const card = document.createElement("div");
   card.className = "product-card";
 
-  // Ajustado para o nome da chave no seu JSON: "informacaoNutricional"
-  const nutrition = product.informacaoNutricional || {};
-
-  // Mapeia dinamicamente: funciona para "Sódio", "Açúcares", "Minerais", etc.
-  const nutritionRows = Object.entries(nutrition)
-    .map(([key, value]) => {
-      // Deixa a primeira letra maiúscula (ex: sodio -> Sódio)
-      const label = key.charAt(0).toUpperCase() + key.slice(1);
-      return `<tr><td><strong>${label}</strong></td><td>${value}</td></tr>`;
-    })
-    .join("");
-
   card.innerHTML = `
     <div class="card-inner">
         <div class="card-front">
@@ -117,15 +105,6 @@ function createProductCard(product) {
                     <span class="product-price">R$ ${product.preco.toFixed(2).replace(".", ",")}</span>
                 </div>
             </div>
-        </div>
-
-        <div class="card-back">
-            <h4>Informação Nutricional</h4>
-            <table class="nutrition-table">
-                <tbody>
-                    ${nutritionRows}
-                </tbody>
-            </table>
         </div>
     </div>
   `;
