@@ -312,21 +312,3 @@ function setupEventListeners() {
 
 // Iniciar aplicação quando o DOM estiver pronto
 document.addEventListener("DOMContentLoaded", init);
-
-productsContainer.addEventListener("click", function (e) {
-  // Encontra o card que foi clicado
-  const card = e.target.closest(".product-card");
-
-  if (!card) return;
-
-  // Se clicar em algum botão ou link dentro do card, não faz o flip
-  if (e.target.closest(".btn-action, button, a")) return;
-
-  // Remove o flip de outros cards (opcional, para fechar os outros ao abrir um novo)
-  document.querySelectorAll(".product-card").forEach((c) => {
-    if (c !== card) c.classList.remove("is-flipped");
-  });
-
-  // Alterna a classe no card clicado
-  card.classList.toggle("is-flipped");
-});
