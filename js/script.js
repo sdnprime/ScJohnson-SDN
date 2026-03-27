@@ -87,39 +87,28 @@ function filterProducts() {
   });
 }
 
+// Criar card de produto
 function createProductCard(product) {
   const card = document.createElement("div");
   card.className = "product-card";
 
-  // Pegamos as chaves do seu JSON
-  const nutrition = product.informacaoNutricional || {};
-
-  // Criamos uma string simples para as calorias, por exemplo
-  const calorias = nutrition.calorias
-    ? `<small>${nutrition.calorias} kcal</small>`
-    : "";
-
   card.innerHTML = `
-    <div class="product-image">
-        <img src="${product.imagem}" alt="${product.nome}" onerror="this.src='https://via.placeholder.com/150'">
-    </div>
-    <div class="product-info">
-        <div class="product-header">
-            <h3 class="product-name">${product.nome}</h3>
-            <p class="product-category">${product.categoria}</p>
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="product-image">
+                <img src="${product.imagem}" alt="${product.nome}" onerror="this.src='https://via.placeholder.com/150'">
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">${product.nome}</h3>
+                <p class="product-category">${product.categoria}</p>
+                <div class="product-footer">
+                    <span class="product-price">De: R$ ${product.precoOriginal.toFixed(2).replace(".", ",")}</span>
+                    <span class="product-price">${product.preco}</span>
+                </div>
+            </div>
         </div>
-        <div class="product-footer">
-            <span class="product-price">R$ ${product.preco.toFixed(2).replace(".", ",")}</span>
-            ${calorias}
-        </div>
-        <button class="btn-detalhes" onclick="event.stopPropagation(); verDetalhes('${product.id}')">
-            Ver Detalhes
-        </button>
     </div>
   `;
-
-  // Adicionamos um clique no card para abrir o modal de detalhes (já que não tem mais flip)
-  card.addEventListener("click", () => openProductModal(product));
 
   return card;
 }
