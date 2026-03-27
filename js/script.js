@@ -209,104 +209,24 @@ function setupEventListeners() {
   // Botão adicionar produto
   addProductBtn.addEventListener("click", () => openFormModal());
 
-  // Busca
-  searchInput.addEventListener("input", (e) => {
-    searchQuery = e.target.value;
-    renderProducts();
-  });
+  // Busca em tempo real
+  if (searchInput) {
+    searchInput.addEventListener("input", (e) => {
+      searchQuery = e.target.value;
+      renderProducts(); // Chama a renderização filtrada
+    });
+  }
 
   // Filtro de categorias
   categoryBtns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
+      // Remove active de todos e adiciona no clicado
       categoryBtns.forEach((b) => b.classList.remove("active"));
-      e.target.classList.add("active");
-      currentCategory = e.target.dataset.category;
+      btn.classList.add("active");
+
+      currentCategory = btn.dataset.category; // Pega o valor do data-category
       renderProducts();
     });
-  });
-
-  // Modal de detalhes
-  document
-    .getElementById("modalCloseBtn")
-    .addEventListener("click", closeProductModal);
-  document
-    .getElementById("closeModalBtn")
-    .addEventListener("click", closeProductModal);
-  document.getElementById("editProductBtn").addEventListener("click", () => {
-    closeProductModal();
-    openFormModal(currentProduct);
-  });
-  document
-    .getElementById("deleteProductBtn")
-    .addEventListener("click", deleteProduct);
-
-  // Modal de formulário
-  document
-    .getElementById("formCloseBtn")
-    .addEventListener("click", closeFormModal);
-  document
-    .getElementById("formCancelBtn")
-    .addEventListener("click", closeFormModal);
-
-  // Abas do formulário
-  formTabs.forEach((tab, index) => {
-    tab.addEventListener("click", () => {
-      formTabs.forEach((t) => t.classList.remove("active"));
-      formTabContents.forEach((c) => c.classList.remove("active"));
-      tab.classList.add("active");
-      formTabContents[index].classList.add("active");
-    });
-  });
-
-  // Envio do formulário
-  productForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const formData = {
-      name: document.getElementById("productName").value,
-      category: document.getElementById("productCategory").value,
-      price: parseFloat(document.getElementById("productPrice").value),
-      image:
-        document.getElementById("productImage").value ||
-        "https://via.placeholder.com/200",
-      description: document.getElementById("productDescription").value,
-      nutritionalInfo: {
-        calories: document.getElementById("productCalories").value,
-        protein: document.getElementById("productProtein").value,
-        carbs: document.getElementById("productCarbs").value,
-        fat: document.getElementById("productFat").value,
-        fiber: document.getElementById("productFiber").value,
-        sodium: document.getElementById("productSodium").value,
-      },
-    };
-
-    if (editingProductId) {
-      // Editar produto existente
-      const product = products.find((p) => p.id === editingProductId);
-      if (product) {
-        Object.assign(product, formData);
-      }
-    } else {
-      // Adicionar novo produto
-      const newProduct = {
-        id: Date.now().toString(),
-        ...formData,
-      };
-      products.push(newProduct);
-    }
-
-    saveProducts();
-    closeFormModal();
-    renderProducts();
-  });
-
-  // Fechar modais ao clicar fora
-  productModal.addEventListener("click", (e) => {
-    if (e.target === productModal) closeProductModal();
-  });
-
-  formModal.addEventListener("click", (e) => {
-    if (e.target === formModal) closeFormModal();
   });
 }
 
