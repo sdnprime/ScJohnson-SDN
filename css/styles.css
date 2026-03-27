@@ -163,6 +163,7 @@ body {
   height: 20rem;
   object-fit: contain;
   background-color: var(--bg-light);
+  transform: scale(1.8);
 }
 
 .product-info {
