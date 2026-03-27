@@ -103,15 +103,6 @@ function createProductCard(product) {
   const card = document.createElement("div");
   card.className = "product-card";
 
-  // Formatação de preços segura
-  const precoAntigo = product.precoOriginal
-    ? `De: R$ ${product.precoOriginal.toFixed(2).replace(".", ",")}`
-    : "";
-  const precoAtual =
-    typeof product.preco === "number"
-      ? `Por: R$ ${product.preco.toFixed(2).replace(".", ",")}`
-      : product.preco;
-
   card.innerHTML = `
     <div class="product-image">
         <img src="${product.imagem}" alt="${product.nome}" onerror="this.src='https://via.placeholder.com/150'">
@@ -120,8 +111,8 @@ function createProductCard(product) {
         <h3 class="product-name">${product.nome}</h3>
         <p class="product-category">${product.categoria}</p>
         <div class="product-footer">
-            <span class="price-old">${precoAntigo}</span>
-            <span class="product-price">${precoAtual}</span>
+            <span class="price-old">${product.precoOriginal}</span>
+            <span class="product-price">${product.preco}</span>
         </div>
     </div>
   `;
