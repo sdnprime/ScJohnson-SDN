@@ -7,6 +7,38 @@
       "precoOriginal": "De: R$: 46,79",
       "preco": "Por: R$: 0,00 + 500 pontos",
       "imagem": "imagens/off-baby.png"
+    },
+    {
+      "id": "2",
+      "nome": "Aerossol Repelente de insetos 170ml",
+      "categoria": "OFF!",
+      "precoOriginal": "De: R$: 29,99",
+      "preco": "Por: R$: 0,00 + 800 pontos",
+      "imagem": "imagens/off-aerosol.png"
+    },
+    {
+      "id": "3",
+      "nome": "Glade Aerossol Lavanda 360ml",
+      "categoria": "Glade",
+      "precoOriginal": "De: R$: 22,48",
+      "preco": "Por: R$: 0,00 + 500 pontos",
+      "imagem": "imagens/glade-lavanda360ml.png"
+    },
+    {
+      "id": "4",
+      "nome": "Lysoform desinfetante parasuperficies 360ml",
+      "categoria": "Lysoform",
+      "precoOriginal": "De: R$: 39,99",
+      "preco": "Por: R$: 0,00 + 400 pontos",
+      "imagem": "imagens/lysoform-desinfetante.png"
+    },
+    {
+      "id": "5",
+      "nome": "Aerossol Repelente de insetos 170ml",
+      "categoria": "OFF!",
+      "precoOriginal": "De: R$: 29,99",
+      "preco": "Por: R$: 0,00 + 500 pontos",
+      "imagem": "imagens/off-aerosol.png"
     }
   ]
 }
