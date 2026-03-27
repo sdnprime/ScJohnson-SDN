@@ -2,11 +2,11 @@
   "dados": [
     {
       "id": "1",
-      "nome": "ÁGUA DE COCO KERO COCO 200ML",
-      "categoria": "Bebidas",
+      "nome": "OFF!® Baby",
+      "categoria": "OFF!®",
       "preco": 5.59,
-      "imagem": "imagens/Kero-Coco-200ml.png",
-      "descricao": "Água de coco natural e refrescante",
+      "imagem": "imagens/off-baby.png",
+      "descricao": "",
       "informacaoNutricional": {
         "Calorias": "45 kcal",
         "Proteina": "0.5g",
