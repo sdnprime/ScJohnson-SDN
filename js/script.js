@@ -1,7 +1,5 @@
 // Estado da aplicação
 let products = [];
-let currentProduct = null;
-let editingProductId = null;
 let currentCategory = "all";
 let searchQuery = "";
 
@@ -9,33 +7,47 @@ let searchQuery = "";
 const productsContainer = document.getElementById("productsContainer");
 const searchInput = document.getElementById("searchInput");
 const categoryBtns = document.querySelectorAll(".category-btn");
-const addProductBtn = document.getElementById("addProductBtn");
-const productModal = document.getElementById("productModal");
-const formModal = document.getElementById("formModal");
-const productForm = document.getElementById("productForm");
-const formTabs = document.querySelectorAll(".form-tab");
-const formTabContents = document.querySelectorAll(".form-tab-content");
 
 // Inicializar aplicação
 function init() {
   carregarCards();
-  renderProducts();
+  setupEventListeners(); // Ativa os ouvintes de clique e digitação
 }
 
 async function carregarCards() {
   try {
     const resposta = await fetch("json/dados.json");
     const json = await resposta.json();
-
-    // Salvamos os dados no array global 'products'
-    // Usamos 'json.dados' porque seu JSON tem essa estrutura
-    products = json.dados;
-
-    // Agora que o array 'products' tem conteúdo, chamamos a renderização
+    // Ajustado para a estrutura do seu JSON (json.dados)
+    products = json.dados || [];
     renderProducts();
   } catch (erro) {
     console.error("Erro ao carregar o JSON:", erro);
   }
+}
+
+// Configurar ouvintes de eventos
+function setupEventListeners() {
+  // Evento de Digitação (Pesquisa Direta)
+  if (searchInput) {
+    searchInput.addEventListener("input", (e) => {
+      searchQuery = e.target.value;
+      renderProducts();
+    });
+  }
+
+  // Evento de Clique nos Botões de Categoria
+  categoryBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      // Atualiza visual dos botões
+      categoryBtns.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      // Atualiza categoria e renderiza
+      currentCategory = btn.dataset.category;
+      renderProducts();
+    });
+  });
 }
 
 // Renderizar produtos
@@ -86,25 +98,30 @@ function filterProducts() {
   });
 }
 
-// Criar card de produto
+// Criar card de produto (Apenas Frente)
 function createProductCard(product) {
   const card = document.createElement("div");
   card.className = "product-card";
 
+  // Formatação de preços segura
+  const precoAntigo = product.precoOriginal
+    ? `De: R$ ${product.precoOriginal.toFixed(2).replace(".", ",")}`
+    : "";
+  const precoAtual =
+    typeof product.preco === "number"
+      ? `Por: R$ ${product.preco.toFixed(2).replace(".", ",")}`
+      : product.preco;
+
   card.innerHTML = `
-    <div class="card-inner">
-        <div class="card-front">
-            <div class="product-image">
-                <img src="${product.imagem}" alt="${product.nome}" onerror="this.src='https://via.placeholder.com/150'">
-            </div>
-            <div class="product-info">
-                <h3 class="product-name">${product.nome}</h3>
-                <p class="product-category">${product.categoria}</p>
-                <div class="product-footer">
-                    <span class="product-price">De: R$ ${product.precoOriginal.toFixed(2).replace(".", ",")}</span>
-                    <span class="product-price">${product.preco}</span>
-                </div>
-            </div>
+    <div class="product-image">
+        <img src="${product.imagem}" alt="${product.nome}" onerror="this.src='https://via.placeholder.com/150'">
+    </div>
+    <div class="product-info">
+        <h3 class="product-name">${product.nome}</h3>
+        <p class="product-category">${product.categoria}</p>
+        <div class="product-footer">
+            <span class="price-old">${precoAntigo}</span>
+            <span class="product-price">${precoAtual}</span>
         </div>
     </div>
   `;
@@ -112,5 +129,5 @@ function createProductCard(product) {
   return card;
 }
 
-// Iniciar aplicação quando o DOM estiver pronto
+// Iniciar quando o DOM estiver pronto
 document.addEventListener("DOMContentLoaded", init);
