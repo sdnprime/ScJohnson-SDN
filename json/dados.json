@@ -2,15 +2,15 @@
   "dados": [
     {
       "id": "1",
-      "nome": "OFF!® Baby",
-      "categoria": "OFF!®",
+      "nome": "OFF! Baby",
+      "categoria": "OFF!",
       "preco": 5.59,
       "imagem": "imagens/off-baby.png"
     },
     {
       "id": "2",
       "nome": "Toque Leve by OFF! Gel",
-      "categoria": "OFF!®",
+      "categoria": "OFF!",
       "preco": 5.99,
       "imagem": "imagens/off-toque-leve-gel.png"
     }

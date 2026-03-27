@@ -92,6 +92,18 @@ function createProductCard(product) {
   const card = document.createElement("div");
   card.className = "product-card";
 
+  // Ajustado para o nome da chave no seu JSON: "informacaoNutricional"
+  const nutrition = product.informacaoNutricional || {};
+
+  // Mapeia dinamicamente: funciona para "Sódio", "Açúcares", "Minerais", etc.
+  const nutritionRows = Object.entries(nutrition)
+    .map(([key, value]) => {
+      // Deixa a primeira letra maiúscula (ex: sodio -> Sódio)
+      const label = key.charAt(0).toUpperCase() + key.slice(1);
+      return `<tr><td><strong>${label}</strong></td><td>${value}</td></tr>`;
+    })
+    .join("");
+
   card.innerHTML = `
     <div class="card-inner">
         <div class="card-front">
@@ -105,6 +117,15 @@ function createProductCard(product) {
                     <span class="product-price">R$ ${product.preco.toFixed(2).replace(".", ",")}</span>
                 </div>
             </div>
+        </div>
+
+        <div class="card-back">
+            <h4>Informação Nutricional</h4>
+            <table class="nutrition-table">
+                <tbody>
+                    ${nutritionRows}
+                </tbody>
+            </table>
         </div>
     </div>
   `;
@@ -209,26 +230,124 @@ function setupEventListeners() {
   // Botão adicionar produto
   addProductBtn.addEventListener("click", () => openFormModal());
 
-  // Busca em tempo real
-  if (searchInput) {
-    searchInput.addEventListener("input", (e) => {
-      searchQuery = e.target.value;
-      renderProducts(); // Chama a renderização filtrada
-    });
-  }
+  // Busca
+  searchInput.addEventListener("input", (e) => {
+    searchQuery = e.target.value;
+    renderProducts();
+  });
 
   // Filtro de categorias
   categoryBtns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
-      // Remove active de todos e adiciona no clicado
       categoryBtns.forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-
-      currentCategory = btn.dataset.category; // Pega o valor do data-category
+      e.target.classList.add("active");
+      currentCategory = e.target.dataset.category;
       renderProducts();
     });
+  });
+
+  // Modal de detalhes
+  document
+    .getElementById("modalCloseBtn")
+    .addEventListener("click", closeProductModal);
+  document
+    .getElementById("closeModalBtn")
+    .addEventListener("click", closeProductModal);
+  document.getElementById("editProductBtn").addEventListener("click", () => {
+    closeProductModal();
+    openFormModal(currentProduct);
+  });
+  document
+    .getElementById("deleteProductBtn")
+    .addEventListener("click", deleteProduct);
+
+  // Modal de formulário
+  document
+    .getElementById("formCloseBtn")
+    .addEventListener("click", closeFormModal);
+  document
+    .getElementById("formCancelBtn")
+    .addEventListener("click", closeFormModal);
+
+  // Abas do formulário
+  formTabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => {
+      formTabs.forEach((t) => t.classList.remove("active"));
+      formTabContents.forEach((c) => c.classList.remove("active"));
+      tab.classList.add("active");
+      formTabContents[index].classList.add("active");
+    });
+  });
+
+  // Envio do formulário
+  productForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const formData = {
+      name: document.getElementById("productName").value,
+      category: document.getElementById("productCategory").value,
+      price: parseFloat(document.getElementById("productPrice").value),
+      image:
+        document.getElementById("productImage").value ||
+        "https://via.placeholder.com/200",
+      description: document.getElementById("productDescription").value,
+      nutritionalInfo: {
+        calories: document.getElementById("productCalories").value,
+        protein: document.getElementById("productProtein").value,
+        carbs: document.getElementById("productCarbs").value,
+        fat: document.getElementById("productFat").value,
+        fiber: document.getElementById("productFiber").value,
+        sodium: document.getElementById("productSodium").value,
+      },
+    };
+
+    if (editingProductId) {
+      // Editar produto existente
+      const product = products.find((p) => p.id === editingProductId);
+      if (product) {
+        Object.assign(product, formData);
+      }
+    } else {
+      // Adicionar novo produto
+      const newProduct = {
+        id: Date.now().toString(),
+        ...formData,
+      };
+      products.push(newProduct);
+    }
+
+    saveProducts();
+    closeFormModal();
+    renderProducts();
+  });
+
+  // Fechar modais ao clicar fora
+  productModal.addEventListener("click", (e) => {
+    if (e.target === productModal) closeProductModal();
+  });
+
+  formModal.addEventListener("click", (e) => {
+    if (e.target === formModal) closeFormModal();
   });
 }
 
 // Iniciar aplicação quando o DOM estiver pronto
 document.addEventListener("DOMContentLoaded", init);
+
+productsContainer.addEventListener("click", function (e) {
+  // Encontra o card que foi clicado
+  const card = e.target.closest(".product-card");
+
+  if (!card) return;
+
+  // Se clicar em algum botão ou link dentro do card, não faz o flip
+  if (e.target.closest(".btn-action, button, a")) return;
+
+  // Remove o flip de outros cards (opcional, para fechar os outros ao abrir um novo)
+  document.querySelectorAll(".product-card").forEach((c) => {
+    if (c !== card) c.classList.remove("is-flipped");
+  });
+
+  // Alterna a classe no card clicado
+  card.classList.toggle("is-flipped");
+});
