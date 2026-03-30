@@ -14,7 +14,7 @@
       "categoria": "OFF!",
       "precoOriginal": "De: R$: 29,99",
       "preco": "Por: R$: 0,00 + 800 pontos",
-      "imagem": "imagens/off-aerosol.png"
+      "imagem": "imagens/off_aerosol.png"
     },
     {
       "id": "3",
@@ -38,7 +38,7 @@
       "categoria": "OFF!",
       "precoOriginal": "De: R$: 29,99",
       "preco": "Por: R$: 0,00 + 500 pontos",
-      "imagem": "imagens/off-aerosol.png"
+      "imagem": "imagens/off_aerosol.png"
     }
   ]
 }
