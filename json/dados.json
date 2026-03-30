@@ -13,7 +13,7 @@
       "nome": "Aerossol Repelente de insetos 170ml",
       "categoria": "OFF!",
       "precoOriginal": "De: R$: 29,99",
-      "preco": "Por: R$: 0,00 + 800 pontos",
+      "preco": "Por: R$: 0,00 + 500 pontos",
       "imagem": "imagens/off_aerosol.png"
     },
     {
@@ -29,7 +29,7 @@
       "nome": "Lysoform desinfetante parasuperficies 360ml",
       "categoria": "Lysoform",
       "precoOriginal": "De: R$: 39,99",
-      "preco": "Por: R$: 0,00 + 400 pontos",
+      "preco": "Por: R$: 0,00 + 600 pontos",
       "imagem": "imagens/lysoform-desinfetante.png"
     },
     {
@@ -39,6 +39,46 @@
       "precoOriginal": "De: R$: 29,99",
       "preco": "Por: R$: 0,00 + 500 pontos",
       "imagem": "imagens/off_aerosol.png"
+    },
+    {
+      "id": "6",
+      "nome": "Lenço Desinfetante Lysoform 36 unid.",
+      "categoria": "Lysoform",
+      "precoOriginal": "De: R$: 20,99",
+      "preco": "Por: R$: 0,00 + 400 pontos",
+      "imagem": "imagens/lysoform-lencos-lavanda.png"
+    },
+    {
+      "id": "7",
+      "nome": "Repelente elétrico Raid 45 noites 32,9ml",
+      "categoria": "Raid",
+      "precoOriginal": "De: R$: 15,18",
+      "preco": "Por: R$: 0,00 + 300 pontos",
+      "imagem": "imagens/raid-perimeter_protection-liquido.png"
+    },
+    {
+      "id": "8",
+      "nome": "Fragrância com infusão de óleos essenciais lavanda Glade 100ml",
+      "categoria": "Glade",
+      "precoOriginal": "De: R$: 20,99",
+      "preco": "Por: R$: 0,00 + 400 pontos",
+      "imagem": "imagens/glade-oleos_e_geis-lavanda.png"
+    },
+    {
+      "id": "9",
+      "nome": "Bloco para Caixa Acoplada Marine 40g Pato",
+      "categoria": "Pato",
+      "precoOriginal": "De: R$: 23,79",
+      "preco": "Por: R$: 0,00 + 500 pontos",
+      "imagem": "imagens/pato_caixa_acoplada_marine.png"
+    },
+    {
+      "id": "10",
+      "nome": "Gel Adesivo Citrus refil 38g Pato",
+      "categoria": "Pato",
+      "precoOriginal": "De: R$: 13,99",
+      "preco": "Por: R$: 0,00 + 300 pontos",
+      "imagem": "imagens/pato_gel_adesivo_citrus_6-refil.png"
     }
   ]
 }
