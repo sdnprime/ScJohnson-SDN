@@ -34,18 +34,18 @@
     },
     {
       "id": "5",
-      "nome": "Aerossol Repelente de insetos 170ml",
+      "nome": "Inseticida Aerossol Raid Multi insetos Aqua protection 420ml",
       "categoria": "OFF!",
-      "precoOriginal": "De: R$: 29,99",
-      "preco": "Por: R$: 0,00 + 500 pontos",
-      "imagem": "imagens/off_aerosol.png"
+      "precoOriginal": "De: R$: 22,19",
+      "preco": "Por: R$: 17,19 + 500 pontos",
+      "imagem": "imagens/raid-aerosol-aqua_technology.png"
     },
     {
       "id": "6",
       "nome": "Lenço Desinfetante Lysoform 36 unid.",
       "categoria": "Lysoform",
       "precoOriginal": "De: R$: 20,99",
-      "preco": "Por: R$: 0,00 + 400 pontos",
+      "preco": "Por: R$: 16,99 + 400 pontos",
       "imagem": "imagens/lysoform-lencos-lavanda.png"
     },
     {
@@ -53,7 +53,7 @@
       "nome": "Repelente elétrico Raid 45 noites 32,9ml",
       "categoria": "Raid",
       "precoOriginal": "De: R$: 15,18",
-      "preco": "Por: R$: 0,00 + 300 pontos",
+      "preco": "Por: R$: 12,18 + 300 pontos",
       "imagem": "imagens/raid-perimetrer_protection-liquido.png"
     },
     {
@@ -61,7 +61,7 @@
       "nome": "Fragrância com infusão de óleos essenciais lavanda Glade 100ml",
       "categoria": "Glade",
       "precoOriginal": "De: R$: 20,99",
-      "preco": "Por: R$: 0,00 + 400 pontos",
+      "preco": "Por: R$: 16,99 + 400 pontos",
       "imagem": "imagens/glade-oleos_e_geis-lavanda.png"
     },
     {
