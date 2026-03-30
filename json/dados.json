@@ -77,8 +77,40 @@
       "nome": "Gel Adesivo Citrus refil 38g Pato",
       "categoria": "Pato",
       "precoOriginal": "De: R$: 13,99",
-      "preco": "Por: R$: 0,00 + 300 pontos",
+      "preco": "",
       "imagem": "imagens/pato_gel_adesivo_citrus_6-refil.png"
+    },
+    {
+      "id": "11",
+      "nome": "Glade brisa Citrica 360ml",
+      "categoria": "Glade",
+      "precoOriginal": "De: R$: 17,99",
+      "preco": "",
+      "imagem": "imagens/glade-spray-brisa_citrica.png"
+    },
+    {
+      "id": "12",
+      "nome": "Desinfetante suave odor Lysoform 5L",
+      "categoria": "Lysoform",
+      "precoOriginal": "De: R$: 48,00",
+      "preco": "",
+      "imagem": "imagens/lysoform-desinfetante_suave_odor.png"
+    },
+    {
+      "id": "13",
+      "nome": "Inseticida Raid Ação Total 285ml",
+      "categoria": "Raid",
+      "precoOriginal": "De: R$: 17,86",
+      "preco": "",
+      "imagem": "imagens/raid-aerosol-acao_total.png"
+    },
+    {
+      "id": "14",
+      "nome": "Gel Repelente de insetos Protege & Hidrata 100g",
+      "categoria": "OFF!",
+      "precoOriginal": "De: R$: 31,99",
+      "preco": "",
+      "imagem": "imagens/off-toque-leve-gel.png"
     }
   ]
 }
