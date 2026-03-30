@@ -13,8 +13,8 @@
       "nome": "Aerossol Repelente de insetos 170ml",
       "categoria": "OFF!",
       "precoOriginal": "De: R$: 29,99",
-      "preco": "Por: R$: 0,00 + 500 pontos",
-      "imagem": "imagens/off-aerosol.png"
+      "preco": "Por: R$: 0,00 + 800 pontos",
+      "imagem": "imagens/off_aerosol.png"
     },
     {
       "id": "3",
@@ -38,15 +38,7 @@
       "categoria": "OFF!",
       "precoOriginal": "De: R$: 29,99",
       "preco": "Por: R$: 0,00 + 500 pontos",
-      "imagem": "imagens/off-aerosol.png"
-    },
-    {
-      "id": "6",
-      "nome": "Inseticida Raid Multi Insetos sem perfume 420ml",
-      "categoria": "Raid",
-      "precoOriginal": "De: R$: 21,99",
-      "preco": "Por: R$: 0,00 + 400 pontos",
-      "imagem": "imagens/inseticida-multi-insetos-raid420ml.png"
+      "imagem": "imagens/off_aerosol.png"
     }
   ]
 }
