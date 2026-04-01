@@ -1,6 +1,6 @@
-# Mix Snacks - Catálogo de Produtos
+# MARKETPLACE CIM
 
-Página estática de catálogo de produtos para os clientes da SDN PRIME.
+Página estática para exemplificar a parceria entre SCJohnson e Congnitivos.
 
 ## 📝 Licença
 
