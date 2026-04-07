@@ -567,7 +567,7 @@ body {
 .product-card {
   background-color: transparent;
   perspective: 1000px;
-  height: 40rem; /* Altura fixa para o giro funcionar bem */
+  height: 30rem; /* Altura fixa para o giro funcionar bem */
   border: none;
   cursor: pointer;
 }
