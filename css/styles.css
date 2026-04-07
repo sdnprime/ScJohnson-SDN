@@ -297,7 +297,7 @@ body {
 
 /* Estilo das imagens dentro do card para não quebrar o layout */
 .product-image img {
-  max-height: 200px;
+  max-height: 11rem;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
