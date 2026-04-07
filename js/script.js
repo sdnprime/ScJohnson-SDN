@@ -118,7 +118,7 @@ function createProductCard(product) {
             <div class="product-info">
                 <h3 class="product-name">${product.nome}</h3>
                 <div class="product-footer">
-                    <span class="price-old">${product.precoOriginal}</span>
+                    <span class="product-price">${product.precoOriginal}</span>
                     <span class="product-price">${product.preco || "Consulte"}</span>
                 </div>
             </div>
