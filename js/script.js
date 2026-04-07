@@ -119,7 +119,7 @@ function createProductCard(product) {
                 <p class="product-category">${product.categoria}</p>
                 <div class="product-footer">
                     <span class="product-price">${product.precoOriginal}</span>
-                    <span class="product-price">${product.preco || "Consulte"}</span>
+                    <span class="product-price">${product.preco}</span>
                 </div>
             </div>
         </div>
