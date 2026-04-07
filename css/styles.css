@@ -202,14 +202,6 @@ body {
   margin-bottom: 0.75rem;
 }
 
-.product-footer {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  padding-top: 1rem;
-  border-top: 1px solid var(--border-color);
-}
-
 .product-price {
   font-size: 1.25rem;
   font-weight: 700;
@@ -300,6 +292,14 @@ body {
   max-height: 11rem;
   object-fit: contain;
   transition: transform 0.3s ease;
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
 }
 
 .product-actions {
