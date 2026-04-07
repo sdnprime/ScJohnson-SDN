@@ -15,7 +15,8 @@
       "categoria": "OFF!",
       "precoOriginal": "De: R$: 29,99",
       "preco": "Por: R$: 0,00 + 500 pontos",
-      "imagem": "imagens/off_aerosol.png"
+      "imagem": "imagens/off_aerosol.png",
+      "instrucoes": ""
     },
     {
       "id": "3",
@@ -23,7 +24,8 @@
       "categoria": "Glade",
       "precoOriginal": "De: R$: 22,48",
       "preco": "Por: R$: 0,00 + 500 pontos",
-      "imagem": "imagens/glade-lavanda360ml.png"
+      "imagem": "imagens/glade-lavanda360ml.png",
+      "instrucoes": ""
     },
     {
       "id": "4",
@@ -31,7 +33,8 @@
       "categoria": "Lysoform",
       "precoOriginal": "De: R$: 39,99",
       "preco": "Por: R$: 0,00 + 600 pontos",
-      "imagem": "imagens/lysoform-desinfetante.png"
+      "imagem": "imagens/lysoform-desinfetante.png",
+      "instrucoes": ""
     },
     {
       "id": "5",
@@ -39,7 +42,8 @@
       "categoria": "Raid",
       "precoOriginal": "De: R$: 22,19",
       "preco": "Por: R$: 17,19 + 500 pontos",
-      "imagem": "imagens/raid-aerosol-aqua_technology.png"
+      "imagem": "imagens/raid-aerosol-aqua_technology.png",
+      "instrucoes": ""
     },
     {
       "id": "6",
@@ -47,7 +51,8 @@
       "categoria": "Lysoform",
       "precoOriginal": "De: R$: 20,99",
       "preco": "Por: R$: 16,99 + 400 pontos",
-      "imagem": "imagens/lysoform-lencos-lavanda.png"
+      "imagem": "imagens/lysoform-lencos-lavanda.png",
+      "instrucoes": ""
     },
     {
       "id": "7",
@@ -55,7 +60,8 @@
       "categoria": "Raid",
       "precoOriginal": "De: R$: 15,18",
       "preco": "Por: R$: 12,18 + 300 pontos",
-      "imagem": "imagens/raid-perimetrer_protection-liquido.png"
+      "imagem": "imagens/raid-perimetrer_protection-liquido.png",
+      "instrucoes": ""
     },
     {
       "id": "8",
@@ -63,7 +69,8 @@
       "categoria": "Glade",
       "precoOriginal": "De: R$: 20,99",
       "preco": "Por: R$: 16,99 + 400 pontos",
-      "imagem": "imagens/glade-oleos_e_geis-lavanda.png"
+      "imagem": "imagens/glade-oleos_e_geis-lavanda.png",
+      "instrucoes": ""
     },
     {
       "id": "9",
@@ -71,7 +78,8 @@
       "categoria": "Pato",
       "precoOriginal": "De: R$: 23,79",
       "preco": "",
-      "imagem": "imagens/pato_caixa_acoplada_marine.png"
+      "imagem": "imagens/pato_caixa_acoplada_marine.png",
+      "instrucoes": ""
     },
     {
       "id": "10",
@@ -79,7 +87,8 @@
       "categoria": "Pato",
       "precoOriginal": "De: R$: 13,99",
       "preco": "",
-      "imagem": "imagens/pato_gel_adesivo_citrus_6-refil.png"
+      "imagem": "imagens/pato_gel_adesivo_citrus_6-refil.png",
+      "instrucoes": ""
     },
     {
       "id": "11",
@@ -87,7 +96,8 @@
       "categoria": "Glade",
       "precoOriginal": "De: R$: 17,99",
       "preco": "",
-      "imagem": "imagens/glade-spray-brisa_citrica.png"
+      "imagem": "imagens/glade-spray-brisa_citrica.png",
+      "instrucoes": ""
     },
     {
       "id": "12",
@@ -95,7 +105,8 @@
       "categoria": "Lysoform",
       "precoOriginal": "De: R$: 48,00",
       "preco": "",
-      "imagem": "imagens/lysoform-desinfetante_suave_odor.png"
+      "imagem": "imagens/lysoform-desinfetante_suave_odor.png",
+      "instrucoes": ""
     },
     {
       "id": "13",
@@ -103,7 +114,8 @@
       "categoria": "Raid",
       "precoOriginal": "De: R$: 17,86",
       "preco": "",
-      "imagem": "imagens/raid-aerosol-acao_total.png"
+      "imagem": "imagens/raid-aerosol-acao_total.png",
+      "instrucoes": ""
     },
     {
       "id": "14",
@@ -111,7 +123,8 @@
       "categoria": "OFF!",
       "precoOriginal": "De: R$: 31,99",
       "preco": "",
-      "imagem": "imagens/off-toque-leve-gel.png"
+      "imagem": "imagens/off-toque-leve-gel.png",
+      "instrucoes": ""
     }
   ]
 }
