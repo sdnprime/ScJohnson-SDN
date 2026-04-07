@@ -179,8 +179,9 @@ body {
 
 .product-image img {
   width: 100%;
-  height: 30rem;
+  height: 100%;
   object-fit: contain;
+  padding: 10px;
   background-color: var(--bg-light);
 }
 
