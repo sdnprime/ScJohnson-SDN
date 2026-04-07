@@ -1,7 +1,5 @@
 // Estado da aplicação
 let products = [];
-let currentProduct = null;
-let editingProductId = null;
 let currentCategory = "all";
 let searchQuery = "";
 
@@ -9,35 +7,47 @@ let searchQuery = "";
 const productsContainer = document.getElementById("productsContainer");
 const searchInput = document.getElementById("searchInput");
 const categoryBtns = document.querySelectorAll(".category-btn");
-const addProductBtn = document.getElementById("addProductBtn");
-const productModal = document.getElementById("productModal");
-const formModal = document.getElementById("formModal");
-const productForm = document.getElementById("productForm");
-const formTabs = document.querySelectorAll(".form-tab");
-const formTabContents = document.querySelectorAll(".form-tab-content");
 
 // Inicializar aplicação
 function init() {
   carregarCards();
-  renderProducts();
-  setupEventListeners();
+  setupEventListeners(); // Ativa os ouvintes de clique e digitação
 }
 
-// Carregar produtos do localStorage ou usar padrão
 async function carregarCards() {
   try {
     const resposta = await fetch("json/dados.json");
     const json = await resposta.json();
-
-    // Salvamos os dados no array global 'products'
-    // Usamos 'json.dados' porque seu JSON tem essa estrutura
-    products = json.dados;
-
-    // Agora que o array 'products' tem conteúdo, chamamos a renderização
+    // Ajustado para a estrutura do seu JSON (json.dados)
+    products = json.dados || [];
     renderProducts();
   } catch (erro) {
     console.error("Erro ao carregar o JSON:", erro);
   }
+}
+
+// Configurar ouvintes de eventos
+function setupEventListeners() {
+  // Evento de Digitação (Pesquisa Direta)
+  if (searchInput) {
+    searchInput.addEventListener("input", (e) => {
+      searchQuery = e.target.value;
+      renderProducts();
+    });
+  }
+
+  // Evento de Clique nos Botões de Categoria
+  categoryBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      // Atualiza visual dos botões
+      categoryBtns.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      // Atualiza categoria e renderiza
+      currentCategory = btn.dataset.category;
+      renderProducts();
+    });
+  });
 }
 
 // Renderizar produtos
@@ -88,29 +98,21 @@ function filterProducts() {
   });
 }
 
-// Criar card de produto
+// Criar card de produto (Apenas Frente)
 function createProductCard(product) {
   const card = document.createElement("div");
   card.className = "product-card";
 
   card.innerHTML = `
-    <div class="card-inner">
-        <div class="card-front">
-            <div class="product-image">
-                <img src="${product.imagem}" alt="${product.nome}" onerror="this.src='https://via.placeholder.com/150'">
-            </div>
-            <div class="product-info">
-                <h3 class="product-name">${product.nome}</h3>
-                <p class="product-category">${product.categoria}</p>
-                <div class="product-footer">
-                    <span class="product-price">${product.precoOriginal}</span>
-                    <span class="product-price">${product.preco}</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="card-back">
-            <h4>${product.categoria}</h4>
+    <div class="product-image">
+        <img src="${product.imagem}" alt="${product.nome}" onerror="this.src='https://via.placeholder.com/150'">
+    </div>
+    <div class="product-info">
+        <h3 class="product-name">${product.nome}</h3>
+        <p class="product-category">${product.categoria}</p>
+        <div class="product-footer">
+            <span class="product-price">${product.precoOriginal}</span>
+            <span class="product-price">${product.preco}</span>
         </div>
     </div>
   `;
@@ -118,42 +120,5 @@ function createProductCard(product) {
   return card;
 }
 
-// Configurar event listeners
-function setupEventListeners() {
-  // Busca
-  searchInput.addEventListener("input", (e) => {
-    searchQuery = e.target.value;
-    renderProducts();
-  });
-
-  // Filtro de categorias
-  categoryBtns.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      categoryBtns.forEach((b) => b.classList.remove("active"));
-      e.target.classList.add("active");
-      currentCategory = e.target.dataset.category;
-      renderProducts();
-    });
-  });
-}
-
-// Iniciar aplicação quando o DOM estiver pronto
+// Iniciar quando o DOM estiver pronto
 document.addEventListener("DOMContentLoaded", init);
-
-productsContainer.addEventListener("click", function (e) {
-  // Encontra o card que foi clicado
-  const card = e.target.closest(".product-card");
-
-  if (!card) return;
-
-  // Se clicar em algum botão ou link dentro do card, não faz o flip
-  if (e.target.closest(".btn-action, button, a")) return;
-
-  // Remove o flip de outros cards (opcional, para fechar os outros ao abrir um novo)
-  document.querySelectorAll(".product-card").forEach((c) => {
-    if (c !== card) c.classList.remove("is-flipped");
-  });
-
-  // Alterna a classe no card clicado
-  card.classList.toggle("is-flipped");
-});
