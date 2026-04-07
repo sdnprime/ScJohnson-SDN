@@ -613,7 +613,7 @@ body {
 }
 
 .card-back h4 {
-  margin-bottom: 1rem;
+  margin: 1rem;
   color: var(--text-light);
   text-align: center;
 }
