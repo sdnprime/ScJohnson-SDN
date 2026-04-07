@@ -586,23 +586,6 @@ body {
   transform: rotateY(180deg);
 }
 
-/* Estilos Base */
-.product-card { perspective: 1000px; width: 280px; height: 380px; }
-.brand-tag { position: absolute; top: 10px; right: 10px; font-weight: bold; padding: 4px 8px; border-radius: 4px; color: white; }
-
-/* Cores por Marca */
-.product-card.off .brand-tag { background-color: #f37021; } /* Laranja OFF! */
-.product-card.off .card-back { border-top: 5px solid #f37021; }
-
-.product-card.lysoform .brand-tag { background-color: #004a99; } /* Azul Lysoform */
-.product-card.lysoform .card-back { border-top: 5px solid #004a99; }
-
-.product-card.raid .brand-tag { background-color: #ffcc00; color: black; } /* Amarelo Raid */
-
-.product-card.pato .brand-tag { background-color: #0082c6; } /* Azul Pato */
-
-.product-card.glade .brand-tag { background-color: #a361a5; } /* Roxo Glade */
-
 /* Estilo comum para as duas faces */
 .card-front,
 .card-back {
