@@ -125,7 +125,7 @@ function createProductCard(product) {
         </div>
 
         <div class="card-back">
-          <img src="logo/${brandSlug}.png" alt="${product.nome}" onerror="this.src='https://via.placeholder.com/150'">
+          <img src="logo/${brandClass}.png" alt="${product.nome}" onerror="this.src='https://via.placeholder.com/150'">
           <h4>Como usar</h4>
           <p class="usage-text">${product.instrucoes || "Informações de uso disponíveis na embalagem do produto."}</p>
         </div>
