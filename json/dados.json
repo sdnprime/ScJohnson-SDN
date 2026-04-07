@@ -7,7 +7,7 @@
       "precoOriginal": "De: R$: 46,79",
       "preco": "Por: R$: 0,00 + 600 pontos",
       "imagem": "imagens/off-baby.png",
-      "instrucoes": "Aplique nas partes expostas do corpo e espalhe uniformemente. Não aplicar sob as roupas."
+      "instrucoes": "Aplique o produto uniformemente nas partes expostas do corpo. Para o rosto, coloque o produto nas mãos e aplique, evitando olhos e boca. Reative após 6 horas."
     },
     {
       "id": "2",
@@ -16,7 +16,7 @@
       "precoOriginal": "De: R$: 29,99",
       "preco": "Por: R$: 0,00 + 500 pontos",
       "imagem": "imagens/off_aerosol.png",
-      "instrucoes": ""
+      "instrucoes": "Agite antes de usar. Aplique a uma distância de 15cm da pele e espalhe com as mãos. Não aplique por baixo das roupas e evite inalação direta do produto."
     },
     {
       "id": "3",
@@ -25,7 +25,7 @@
       "precoOriginal": "De: R$: 22,48",
       "preco": "Por: R$: 0,00 + 500 pontos",
       "imagem": "imagens/glade-lavanda360ml.png",
-      "instrucoes": ""
+      "instrucoes": "Agite bem antes de cada uso. Segure a embalagem verticalmente e pulverize em direção ao centro do ambiente para eliminar odores e perfumar instantaneamente."
     },
     {
       "id": "4",
@@ -34,7 +34,7 @@
       "precoOriginal": "De: R$: 39,99",
       "preco": "Por: R$: 0,00 + 600 pontos",
       "imagem": "imagens/lysoform-desinfetante.png",
-      "instrucoes": ""
+      "instrucoes": "Aplique diretamente sobre a superfície a ser desinfetada a uma distância de 15 a 20cm. Deixe agir por 10 minutos para garantir a eliminação de germes e bactérias."
     },
     {
       "id": "5",
@@ -43,7 +43,7 @@
       "precoOriginal": "De: R$: 22,19",
       "preco": "Por: R$: 17,19 + 500 pontos",
       "imagem": "imagens/raid-aerosol-aqua_technology.png",
-      "instrucoes": ""
+      "instrucoes": "Agite bem. Pulverize o produto diretamente sobre os insetos ou no ambiente em todas as direções por 7 a 9 segundos. Saia do local e deixe agir por 15 minutos."
     },
     {
       "id": "6",
@@ -52,7 +52,7 @@
       "precoOriginal": "De: R$: 20,99",
       "preco": "Por: R$: 16,99 + 400 pontos",
       "imagem": "imagens/lysoform-lencos-lavanda.png",
-      "instrucoes": ""
+      "instrucoes": "Retire o lenço e passe na superfície desejada. Para desinfecção, a superfície deve permanecer úmida por 4 minutos. Não utilizar para higiene pessoal."
     },
     {
       "id": "7",
@@ -61,7 +61,7 @@
       "precoOriginal": "De: R$: 15,18",
       "preco": "Por: R$: 12,18 + 300 pontos",
       "imagem": "imagens/raid-perimetrer_protection-liquido.png",
-      "instrucoes": ""
+      "instrucoes": "Remova a tampa do refil e rosqueie no aparelho. Coloque na tomada (110-220V) sempre na vertical. Mantenha uma janela ou porta entreaberta para circulação de ar."
     },
     {
       "id": "8",
@@ -70,7 +70,7 @@
       "precoOriginal": "De: R$: 20,99",
       "preco": "Por: R$: 16,99 + 400 pontos",
       "imagem": "imagens/glade-oleos_e_geis-lavanda.png",
-      "instrucoes": ""
+      "instrucoes": "Retire o lacre protetor e posicione o frasco em uma superfície plana. A fragrância será liberada gradualmente através da evaporação dos óleos essenciais."
     },
     {
       "id": "9",
@@ -79,7 +79,7 @@
       "precoOriginal": "De: R$: 23,79",
       "preco": "",
       "imagem": "imagens/pato_caixa_acoplada_marine.png",
-      "instrucoes": ""
+      "instrucoes": "Remova a tampa da caixa acoplada. Coloque o bloco no canto oposto à entrada de água. Aguarde 10 minutos antes da primeira descarga para ativar a limpeza."
     },
     {
       "id": "10",
@@ -88,7 +88,7 @@
       "precoOriginal": "De: R$: 13,99",
       "preco": "",
       "imagem": "imagens/pato_gel_adesivo_citrus_6-refil.png",
-      "instrucoes": ""
+      "instrucoes": "Encaixe o tubo aplicador no refil. Pressione contra a parede interna do vaso sanitário seca até que o botão trave. O gel liberará fragrância a cada descarga."
     },
     {
       "id": "11",
@@ -97,7 +97,7 @@
       "precoOriginal": "De: R$: 17,99",
       "preco": "",
       "imagem": "imagens/glade-spray-brisa_citrica.png",
-      "instrucoes": ""
+      "instrucoes": "Segure a lata na posição vertical. Pulverize o spray para cima, no centro do cômodo, evitando contato direto com tecidos, móveis e pessoas."
     },
     {
       "id": "12",
@@ -106,7 +106,7 @@
       "precoOriginal": "De: R$: 48,00",
       "preco": "",
       "imagem": "imagens/lysoform-desinfetante_suave_odor.png",
-      "instrucoes": ""
+      "instrucoes": "Para limpeza geral, dilua 2 tampas por litro de água. Para desinfecção profunda, utilize o produto puro e deixe agir por 10 minutos antes de enxaguar."
     },
     {
       "id": "13",
@@ -115,7 +115,7 @@
       "precoOriginal": "De: R$: 17,86",
       "preco": "",
       "imagem": "imagens/raid-aerosol-acao_total.png",
-      "instrucoes": ""
+      "instrucoes": "Feche o ambiente. Pulverize o produto para o alto por 8 segundos. Mantenha o local fechado por 15 minutos e ventile bem antes de permitir a entrada de pessoas."
     },
     {
       "id": "14",
@@ -124,7 +124,7 @@
       "precoOriginal": "De: R$: 31,99",
       "preco": "",
       "imagem": "imagens/off-toque-leve-gel.png",
-      "instrucoes": ""
+      "instrucoes": "Aplique pequenas quantidades do gel na pele e espalhe uniformemente. A fórmula com Aloe Vera hidrata enquanto protege contra mosquitos por até 4 horas."
     }
   ]
 }
