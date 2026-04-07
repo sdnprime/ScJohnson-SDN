@@ -101,18 +101,38 @@ function filterProducts() {
 // Criar card de produto (Apenas Frente)
 function createProductCard(product) {
   const card = document.createElement("div");
-  card.className = "product-card";
+  // Gera um slug da categoria para cores dinâmicas (ex: "OFF!" -> "off")
+  const brandClass = product.categoria.toLowerCase().replace(/[^a-z]/g, "");
+  card.className = `product-card ${brandClass}`;
+
+  // Adiciona evento de clique para girar
+  card.onclick = () => card.classList.toggle("flipped");
 
   card.innerHTML = `
-    <div class="product-image">
-        <img src="${product.imagem}" alt="${product.nome}" onerror="this.src='https://via.placeholder.com/150'">
-    </div>
-    <div class="product-info">
-        <h3 class="product-name">${product.nome}</h3>
-        <p class="product-category">${product.categoria}</p>
-        <div class="product-footer">
-            <span class="product-price">${product.precoOriginal}</span>
-            <span class="product-price">${product.preco}</span>
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="brand-badge">${product.categoria}</div>
+            <div class="product-image">
+                <img src="${product.imagem}" alt="${product.nome}" onerror="this.src='https://via.placeholder.com/150'">
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">${product.nome}</h3>
+                <div class="product-footer">
+                    <span class="price-old">${product.precoOriginal}</span>
+                    <span class="product-price">${product.preco || "Consulte"}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-back">
+            <div class="back-content">
+                <img src="logo/scj-logo.svg" class="mini-logo" alt="SC Johnson">
+                <h4>Como usar</h4>
+                <p class="usage-text">${product.instrucoes || "Informações de uso disponíveis na embalagem do produto."}</p>
+                <div class="back-footer">
+                    <span>Toque para voltar</span>
+                </div>
+            </div>
         </div>
     </div>
   `;
