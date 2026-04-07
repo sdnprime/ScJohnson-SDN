@@ -621,6 +621,10 @@ body {
   margin-top: -4rem;
 }
 
+.card-back .usage-text {
+  color: var(--text-light);
+}
+
 footer {
   display: flex;
   flex-direction: column;
