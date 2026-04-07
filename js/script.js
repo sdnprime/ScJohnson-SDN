@@ -103,13 +103,12 @@ function createProductCard(product) {
   const card = document.createElement("div");
   // Gera um slug da categoria para cores dinâmicas (ex: "OFF!" -> "off")
   const brandClass = product.categoria.toLowerCase().replace(/[^a-z]/g, "");
-  card.className = `product-card ${brandClass}`;
+  card.className = `product-card`;
 
   // Adiciona evento de clique para girar
   card.onclick = () => card.classList.toggle("flipped");
 
-  card.innerHTML =
-    `
+  card.innerHTML = `
     <div class="card-inner">
         <div class="card-front">
             <div class="product-image">
@@ -126,7 +125,7 @@ function createProductCard(product) {
         </div>
 
         <div class="card-back">
-          <img src=`../logo/product.categoria.toLowerCase().png` alt="${product.nome}" onerror="this.src='https://via.placeholder.com/150'">
+          <img src="logo/${brandSlug}.png" alt="${product.nome}" onerror="this.src='https://via.placeholder.com/150'">
           <h4>Como usar</h4>
           <p class="usage-text">${product.instrucoes || "Informações de uso disponíveis na embalagem do produto."}</p>
         </div>
