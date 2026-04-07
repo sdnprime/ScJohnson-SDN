@@ -617,6 +617,11 @@ body {
   color: var(--text-light);
   text-align: center;
 }
+
+.card-back img {
+  margin-top: -10rem;
+}
+
 footer {
   display: flex;
   flex-direction: column;
