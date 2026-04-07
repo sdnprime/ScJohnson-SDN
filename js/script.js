@@ -101,24 +101,48 @@ function filterProducts() {
 // Criar card de produto (Apenas Frente)
 function createProductCard(product) {
   const card = document.createElement("div");
-  card.className = "product-card";
+
+  // Normaliza o nome da categoria para usar como classe CSS (ex: "OFF!" vira "off")
+  const brandSlug = product.categoria.toLowerCase().replace(/[^a-z0-9]/g, "");
+  card.className = `product-card ${brandSlug}`;
+
+  // Clique para virar o card
+  card.onclick = () => card.classList.toggle("flipped");
 
   card.innerHTML = `
-    <div class="product-image">
-        <img src="${product.imagem}" alt="${product.nome}" onerror="this.src='https://via.placeholder.com/150'">
-    </div>
-    <div class="product-info">
-        <h3 class="product-name">${product.nome}</h3>
-        <p class="product-category">${product.categoria}</p>
-        <div class="product-footer">
-            <span class="product-price">${product.precoOriginal}</span>
-            <span class="product-price">${product.preco}</span>
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="brand-badge">${product.categoria}</div>
+            <div class="product-image">
+                <img src="${product.imagem}" alt="${product.nome}" onerror="this.src='https://via.placeholder.com/150'">
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">${product.nome}</h3>
+                <div class="price-container">
+                    <span class="price-old">${product.precoOriginal}</span>
+                    <span class="price-current">${product.preco}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-back">
+            <div class="back-header">
+                <small>Linha Profissional</small>
+                <img src="/logos/scj-logo.svg" class="scj-logo" alt="S.C. Johnson">
+            </div>
+            <div class="back-content">
+                <h4>${product.categoria}</h4>
+                <p>Este produto faz parte da família S.C. Johnson, garantindo qualidade e proteção para sua casa.</p>
+                <div class="benefit-tag">Qualidade Garantida</div>
+            </div>
+            <div class="back-footer">
+                <p>Toque para voltar</p>
+            </div>
         </div>
     </div>
   `;
 
   return card;
 }
-
 // Iniciar quando o DOM estiver pronto
 document.addEventListener("DOMContentLoaded", init);

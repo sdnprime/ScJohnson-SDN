@@ -28,12 +28,10 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/* Seleciona as imagens que estão dentro de um link no header */
-.header-content a img {
-  width: 100%; /* Elas vão ocupar 100% da largura do link <a> */
-  height: auto;
-  display: block; /* Remove espaços vazios abaixo da imagem */
-}
+/* .header-content a img {
+  width: 10%;
+  height: 100%;
+} */
 
 /* Controla o tamanho do link em si (que agora é o container da imagem) */
 .header-content a {
@@ -42,10 +40,11 @@ body {
   align-items: center;
 }
 
-/* .header-content img {
-  width: 15%;
-  height: 100%;
-} */
+.header-content a img {
+  width: 100%; /* Elas vão ocupar 100% da largura do link <a> */
+  height: auto;
+  display: block; /* Remove espaços vazios abaixo da imagem */
+}
 
 .header-left h1 {
   font-size: 2rem;
@@ -147,7 +146,7 @@ body {
 .products-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem;
+  gap: 1rem;
   margin-bottom: 3rem;
 }
 
@@ -163,9 +162,13 @@ body {
   flex-direction: column;
 }
 
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
 .product-image {
   width: 100%;
-  height: 350px;
+  height: product-product-footer;
   background-color: var(--bg-light);
   display: flex;
   align-items: center;
@@ -175,10 +178,9 @@ body {
 
 .product-image img {
   width: 100%;
-  height: 9rem;
+  height: 30rem;
   object-fit: contain;
   background-color: var(--bg-light);
-  transform: scale(1.8);
 }
 
 .product-info {
@@ -565,14 +567,45 @@ body {
 .product-card {
   background-color: transparent;
   perspective: 1000px;
-  height: 32rem; /* Altura fixa para o giro funcionar bem */
+  height: 40rem; /* Altura fixa para o giro funcionar bem */
+  border: none;
   cursor: pointer;
-  border-radius: 0.75rem;
-  border: 1px solid var(--border-color);
 }
 
+/* O "esqueleto" que realmente vai girar */
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+/* Giro ao passar o mouse */
+.product-card.is-flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Estilos Base */
+.product-card { perspective: 1000px; width: 280px; height: 380px; }
+.brand-tag { position: absolute; top: 10px; right: 10px; font-weight: bold; padding: 4px 8px; border-radius: 4px; color: white; }
+
+/* Cores por Marca */
+.product-card.off .brand-tag { background-color: #f37021; } /* Laranja OFF! */
+.product-card.off .card-back { border-top: 5px solid #f37021; }
+
+.product-card.lysoform .brand-tag { background-color: #004a99; } /* Azul Lysoform */
+.product-card.lysoform .card-back { border-top: 5px solid #004a99; }
+
+.product-card.raid .brand-tag { background-color: #ffcc00; color: black; } /* Amarelo Raid */
+
+.product-card.pato .brand-tag { background-color: #0082c6; } /* Azul Pato */
+
+.product-card.glade .brand-tag { background-color: #a361a5; } /* Roxo Glade */
+
 /* Estilo comum para as duas faces */
-.card-front {
+.card-front,
+.card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -584,6 +617,20 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+}
+
+/* Face de Trás (Tabela) */
+.card-back {
+  transform: rotateY(180deg);
+  padding: 1.5rem;
+  background-color: var(--bg-dark);
+  justify-content: center;
+}
+
+.card-back h4 {
+  margin-bottom: 1rem;
+  color: var(--text-light);
+  text-align: center;
 }
 
 footer {
