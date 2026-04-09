@@ -101,8 +101,20 @@ function filterProducts() {
 // Criar card de produto (Apenas Frente)
 function createProductCard(product) {
   const card = document.createElement("div");
-  // Gera um slug da categoria para cores dinâmicas (ex: "OFF!" -> "off")
-  const brandClass = product.categoria.toLowerCase().replace(/[^a-z]/g, "");
+
+  // Lógica de definição da logo (brandClass)
+  let brandClass;
+
+  // Verifica se é o produto específico para usar a logo off-baby
+  if (
+    product.nome === "Repelente de Insetos Gel Off! Baby com Icaridina 200g"
+  ) {
+    brandClass = "off-baby";
+  } else {
+    // Mantém a lógica original para os outros produtos
+    brandClass = product.categoria.toLowerCase().replace(/[^a-z]/g, "");
+  }
+
   card.className = `product-card`;
 
   // Adiciona evento de clique para girar
